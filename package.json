@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Send sunrise and other info to Arduino IoT Cloud",
   "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brian Gershon <brian.five@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "cool-ascii-faces": "^1.3.4",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "suncalc": "^1.8.0"
   }
 }
