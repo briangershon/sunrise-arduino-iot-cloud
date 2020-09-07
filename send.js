@@ -59,7 +59,7 @@ async function run() {
     await propertiesAPI.propertiesV2Publish(thingID, messagePropertyID, {
       value: calc().localTimes.sunrise,
     });
-    console.log(`Sent sunrise: '${calc().localTimes.sunrise}' to ${process.env.THING_ID} THING_ID`);
+    console.log(`Sent sunrise: '${calc().localTimes.sunrise}' to THING: ${process.env.THING_ID}`);
   } catch (err) {
     console.log("ERROR", err);
   }

@@ -34,6 +34,10 @@ THING_ID=Arduino_IoT_ThingID_goes_here
 MESSAGE_PROPERTY_ID=Arduino_IoT_MessagePropertyID_goes_here
 ```
 
+Test sending sunset via:
+
+    heroku run npm run send-sunrise
+
 ## Useful Heroku commands
 
     heroku logs --tail
