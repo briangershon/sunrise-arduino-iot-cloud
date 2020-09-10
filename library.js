@@ -19,7 +19,7 @@ function calc() {
       unixTimes[property] = Math.floor(times[property].getTime() / 1000);
   
       const options = {
-        timeZone: timeZone,
+        timeZone,
         hour: "numeric",
         minute: "numeric",
       };

@@ -36,7 +36,8 @@ async function run() {
 
     const deviceID = process.env.DEVICE_ID;
     const thingID = process.env.THING_ID;
-    const messagePropertyID = process.env.MESSAGE_PROPERTY_ID;
+    const sunrisePropertyID = process.env.SUNRISE_PROPERTY_ID;
+    const sunsetPropertyID = process.env.SUNSET_PROPERTY_ID;
 
     var thingsAPI = new IotApi.ThingsV2Api(client);
     var opts = {
@@ -54,12 +55,18 @@ async function run() {
     //   })
     // );
 
-    const now = new Date();
     const propertiesAPI = new IotApi.PropertiesV2Api(client);
-    await propertiesAPI.propertiesV2Publish(thingID, messagePropertyID, {
+
+    await propertiesAPI.propertiesV2Publish(thingID, sunrisePropertyID, {
       value: calc().localTimes.sunrise,
     });
     console.log(`Sent sunrise: '${calc().localTimes.sunrise}' to THING: ${process.env.THING_ID}`);
+
+    await propertiesAPI.propertiesV2Publish(thingID, sunsetPropertyID, {
+      value: calc().localTimes.sunset,
+    });
+    console.log(`Sent sunset: '${calc().localTimes.sunset}' to THING: ${process.env.THING_ID}`);
+
   } catch (err) {
     console.log("ERROR", err);
   }
