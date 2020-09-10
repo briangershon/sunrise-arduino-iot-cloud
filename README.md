@@ -1,10 +1,12 @@
 # sunrise-arduino-iot-cloud
 
-Send sunrise time to Arduino IoT Cloud.
+Sends sunrise and sunset times for Seattle, WA to Arduino IoT Cloud.
 
-Updates `message` property in IoT Cloud for DEVICE_ID and THING_ID.
+Updates `sunrise` and `sunset` properties in IoT Cloud for DEVICE_ID and THING_ID.
 
-An Arduino can then grab this information and display it.
+An Arduino can then grab this information from Arduino IoT Cloud and display it.
+
+These were calculated by the very cool <https://github.com/mourner/suncalc> library! No API needed.
 
 Hosted on Heroku at <https://sunrise-arduino-iot-cloud.herokuapp.com>
 
