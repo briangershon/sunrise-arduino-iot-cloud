@@ -1,15 +1,21 @@
 # sunrise-arduino-iot-cloud
 
+## About
+
 Sends sunrise, sunset and air quality data for Seattle WA to Arduino IoT Cloud.
 
 An Arduino can then grab this information from IoT Cloud and display it.
 
-Where does the data come from?
-
-- Sunset and sunrise calculated by [suncalc](https://github.com/mourner/suncalc) library. No API needed.
-- Air quality data (Ozone and PM2.5) comes from AirNow API <https://docs.airnowapi.org>
+Learn more about this project (and corresponding Arduino sketch) on my blog at [Regional Air Quality with Arduino Explore IoT Kit](https://www.briangershon.com/blog/arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset/).
 
 Server hosted on Heroku at <https://sunrise-arduino-iot-cloud.herokuapp.com>
+
+## Where does the data come from?
+
+- Sunset and sunrise calculated by [suncalc](https://github.com/mourner/suncalc) library. No API needed.
+- Air quality data (Ozone and PM2.5) comes from U.S. EPA AirNow API: <https://docs.airnowapi.org>
+
+## Example output
 
 Example output from `src/send.js` script:
 
