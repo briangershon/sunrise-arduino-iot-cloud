@@ -2,13 +2,13 @@
   "name": "sunrise-arduino-iot-cloud",
   "version": "1.0.0",
   "description": "Send sunrise and other info to Arduino IoT Cloud",
-  "main": "server.js",
   "engines": {
     "node": "12.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "send-sunrise": "node send.js"
+    "start": "node src/server.js",
+    "send-sunrise": "node src/send.js"
   },
   "author": "Brian Gershon <brian.five@gmail.com>",
   "license": "ISC",
