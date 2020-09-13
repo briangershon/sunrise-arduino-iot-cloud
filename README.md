@@ -6,10 +6,14 @@ An Arduino can then grab this information from IoT Cloud and display it.
 
 Where does the data come from?
 
-* Sunset and sunrise calculated by the very cool <https://github.com/mourner/suncalc> library! No API needed.
-* Air quality data (Ozone and PM2.5) comes from AirNow API <https://docs.airnowapi.org>
+- Sunset and sunrise calculated by [suncalc](https://github.com/mourner/suncalc) library. No API needed.
+- Air quality data (Ozone and PM2.5) comes from AirNow API <https://docs.airnowapi.org>
 
 Server hosted on Heroku at <https://sunrise-arduino-iot-cloud.herokuapp.com>
+
+Example output from `src/send.js` script:
+
+![Example output from send.js script](update-properties-from-node.png)
 
 ## Heroku Setup
 
@@ -17,7 +21,7 @@ Setup heroku CLI on MacOS via `brew tap heroku/brew && brew install heroku`.
 
 `heroku login`
 
-Clone repo then run `heroku git:remote -a sunrise-arduino-iot-cloud` to deploy to Heroku.
+Clone repo then run `heroku git:remote -a sunrise-arduino-iot-cloud` to setup remote to Heroku for deploying.
 
 ## Running Locally
 
